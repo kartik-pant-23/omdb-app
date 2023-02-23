@@ -1,0 +1,71 @@
+.galleryContainer {
+  width: 800px;
+  max-width: calc(100vw - 2rem);
+  aspect-ratio: 3/2;
+  margin: 1rem auto;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 2rem rgb(0, 0, 0);
+}
+
+.galleryImages {
+  height: 100%;
+  display: flex;
+  transition: margin 750ms ease-in-out;
+}
+
+.galleryCardBackground {
+  height: 100%;
+  aspect-ratio: 3/2;
+  background-size: cover;
+  padding: 1rem;
+  position: relative;
+}
+
+.galleryContent {
+  display: flex;
+  height: 60%;
+  width: calc(100% - 2rem);
+  position: absolute;
+  bottom: 1rem;
+}
+
+.galleryCardPoster {
+  height: 100%;
+  aspect-ratio: 2/3;
+  background-size: cover;
+}
+
+.galleryCardTitle {
+  font-size: 4vw;
+  margin: 0;
+  margin-top: auto;
+  margin-left: 1rem;
+}
+
+.buttonsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: calc(50% - 1rem);
+}
+
+.buttons {
+  height: 10vw;
+  max-height: 4rem;
+  min-height: 2rem;
+  aspect-ratio: 2/3;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 0.5px solid white;
+  border-radius: 2px;
+}
+.buttons:hover {
+  color: #f5c519;
+}
