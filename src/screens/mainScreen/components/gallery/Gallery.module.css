@@ -1,3 +1,10 @@
+.galleryUpNextContainer {
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .galleryContainer {
   width: 800px;
   max-width: calc(100vw - 2rem);
@@ -10,7 +17,11 @@
 }
 
 .galleryImages {
-  height: 100%;
+  /* height: 100%;
+  aspect-ratio: 3/2; */
+  width: 800px;
+  max-width: calc(100vw - 2rem);
+  aspect-ratio: 3/2;
   display: flex;
   transition: margin 750ms ease-in-out;
 }

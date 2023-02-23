@@ -1,0 +1,31 @@
+.upNextContainer {
+  padding: 1rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.pageHeader {
+  color: #f5c519;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.movieContainer {
+  display: flex;
+  width: 100%;
+  background-color: #1d1d1d;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+  margin: 0.5rem auto;
+}
+
+.moviePoster {
+  width: 25%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.movieTitle {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+}
