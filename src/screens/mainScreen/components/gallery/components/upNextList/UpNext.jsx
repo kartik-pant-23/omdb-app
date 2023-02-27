@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import styles from "./UpNext.module.css";
 
-function UpNext({ movies, currentIndex }) {
+function UpNext({ movies, currentIndex, onUpNextItemClicked }) {
   const [upNextList, setUpNextList] = useState([]);
   useEffect(() => {
     const elems = [];
@@ -17,7 +17,11 @@ function UpNext({ movies, currentIndex }) {
     <div className={styles.upNextContainer}>
       <h2 className={styles.pageHeader}>Up Next</h2>
       {upNextList.map((movie) => (
-        <div key={movie.id} className={styles.movieContainer}>
+        <div
+          key={movie.id}
+          className={styles.movieContainer}
+          onClick={() => onUpNextItemClicked(movie.id)}
+        >
           <img
             className={styles.moviePoster}
             src={movie.poster_img}
@@ -33,6 +37,7 @@ function UpNext({ movies, currentIndex }) {
 UpNext.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.object),
   currentIndex: PropTypes.number,
+  onUpNextItemClicked: PropTypes.func,
 };
 
 export default UpNext;

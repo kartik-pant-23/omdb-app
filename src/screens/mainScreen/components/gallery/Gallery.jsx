@@ -23,6 +23,18 @@ function Gallery({ movies }) {
     });
   };
 
+  const handleUpNextItemClicked = (movieId) => {
+    let movieIndex = -1;
+    movies.forEach((movie, index) => {
+      if (movie.id === movieId) {
+        movieIndex = index;
+      }
+    });
+    if (movieIndex !== -1) {
+      setCurrentIndex(movieIndex);
+    }
+  };
+
   useEffect(() => {
     galleryImagesRef.current.style.marginLeft = `-${100 * currentIndex}%`;
 
@@ -67,7 +79,11 @@ function Gallery({ movies }) {
 
         <div></div>
       </div>
-      <UpNext movies={movies} currentIndex={currentIndex} />
+      <UpNext
+        movies={movies}
+        currentIndex={currentIndex}
+        onUpNextItemClicked={handleUpNextItemClicked}
+      />
     </div>
   );
 }
