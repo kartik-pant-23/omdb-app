@@ -1,0 +1,51 @@
+.navbar {
+  background-color: #202020;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+.navbar > div {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 750px;
+  max-width: calc(100vw - 2rem);
+}
+
+.brand {
+  background-color: #f5c519;
+  padding: 0.25rem;
+  border-radius: 0.2rem;
+}
+.brand a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #2d2d2d;
+  font-family: system-ui;
+}
+
+.searchBox {
+  width: calc(100% - 4.75rem);
+  border-radius: 0.2rem;
+  border: none;
+  font-family: sans-serif;
+  display: flex;
+}
+
+.typesSelect {
+  margin: 0;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border: none;
+  margin-right: 1px;
+}
+
+.searchBox > input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+}
+.searchBox > input:focus,
+.searchBox > select:focus {
+  outline: none;
+}
